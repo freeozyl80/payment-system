@@ -28,7 +28,7 @@ jobs:
       uses: wlixcc/SFTP-Deploy-Action@v1.0
       with:
           username: 'root'
-          server: '43.129.207.231' #测试服务器地址
+          server: '${{ secrets.REMOTE_HOST }}' #测试服务器地址
           ssh_private_key: '${ secrets.ACCESS_TOKEN }'
           local_path: 'proxy/proxy'
           remote_path: ${{ secrets.TARGET }} #测试服务器部署路径
