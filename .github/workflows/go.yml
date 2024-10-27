@@ -25,10 +25,10 @@ jobs:
       run: cd proxy && go build -v
 
     - name: Deploy
-      uses: wlixcc/SFTP-Deploy-Action@v1.0
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
           username: 'root'
           server: '43.129.207.231' #测试服务器地址
-          ssh_private_key: ${{ secrets.ACCESS_TOKEN }}
+          password: 'Zyl494944297@'
           local_path: 'proxy/proxy'
           remote_path: '/root/app/proxy' #测试服务器部署路径
