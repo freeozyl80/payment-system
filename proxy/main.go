@@ -23,7 +23,7 @@ type StockQuote struct {
 
 func main() {
 	client := &http.Client{
-		Timeout: 1 * time.Second, // Set timeout to 5 seconds
+		Timeout: 10 * time.Second, // Set timeout to 5 seconds
 	}
 
 	r := chi.NewRouter()
