@@ -29,6 +29,6 @@ jobs:
       with:
           username: 'root'
           server: '43.129.207.231' #测试服务器地址
-          ssh_private_key: '${ secrets.ACCESS_TOKEN }'
+          ssh_private_key: ${{ secrets.ACCESS_TOKEN }}
           local_path: 'proxy/proxy'
           remote_path: '/root/app/proxy' #测试服务器部署路径
